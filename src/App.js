@@ -1,19 +1,36 @@
 import React, { Component } from "react";
 import Card from "./Card";
+import {getPokemons} from "./pokemonData";
 
-const pokemon = {
-  name: "Charmander",
-  type: "fire",
-  price: 20,
-  image: "https://cdn.bulbagarden.net/upload/7/73/004Charmander.png"
-};
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pokemon: getPokemons(),
+      value: ''
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+  
   render() {
     return (
       <div className="wrapper">
+        <div className="textInput">
+          <input type="text" placeholder="Search your pokedex!" value={this.state.value} onChange={this.handleChange} />
+        </div>
+        
         <div className="list">
-          <Card pokemon={pokemon} />
+        {
+          this.state.pokemon.map(element => {
+            return <Card pokemon={element} /> 
+          })
+        }
         </div>
       </div>
     );

@@ -286,5 +286,9 @@ body {
 }
 
 .typeList li.fairy {
-	background-color: #e999de
+	background-color: #e999de;
+}
+
+.textInput {
+	margin: 0 auto;
 }
