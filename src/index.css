@@ -290,5 +290,34 @@ body {
 }
 
 .textInput {
-	margin: 0 auto;
+	text-align: center;
+	padding: 10px;
+}
+
+input {
+	width: 740px;
+	font-size: 1.5em;
+}
+
+#fire {
+	background-color: #fe7500
+}
+
+#water {
+	background-color: #6a87f3
+}
+
+#grass {
+	background-color: #53d34e
+}
+
+#thunder {
+	background-color: #e3c260
+}
+
+#psychic {
+	background-color: #ff2482
+}
+#ice {
+	background-color: #b282f2
 }
